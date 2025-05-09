@@ -1,4 +1,7 @@
 # neovim
+## Required
+neovim
+git
 ## Installation
 ```
 cd ~/.config
