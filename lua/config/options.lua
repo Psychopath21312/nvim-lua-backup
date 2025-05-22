@@ -11,4 +11,3 @@ vim.opt.laststatus = 3 -- global statusline
 vim.opt.showmode = false -- Dont show mode since we have a statusline
 
 vim.expandtab = True
-

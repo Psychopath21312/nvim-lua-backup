@@ -1,20 +1,24 @@
 return {
-	'stevearc/conform.nvim',
-	opts = {},
-	config = function()
-		require('conform').setup({
-
+	{
+		"stevearc/conform.nvim",
+		opts = {
 			formatters_by_ft = {
-				rust = { "rustfmt" },
 				lua = { "stylua" },
 				-- You can add other filetypes here
 			},
+			format_on_save = function(bufnr)
+				local filetype = vim.bo[bufnr].filetype
 
-			format_on_save = {
-				timeout_ms = 500,
-				lsp_fallback = true,
-			},
+				if filetype == "lua" then
+					return { timeout_ms = 500, lsp_fallback = true }
+				end
 
-		})
-	end
+				-- for others languages
+				return false
+			end,
+		},
+		config = function(_, opts)
+			require("conform").setup(opts)
+		end,
+	},
 }

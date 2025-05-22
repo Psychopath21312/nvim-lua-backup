@@ -1,33 +1,32 @@
 return {
 
 	{
-		'mfussenegger/nvim-lint',
+		"mfussenegger/nvim-lint",
+		dependencies = "williamboman/mason.nvim",
 		opts = {
-			events = { 'BufWritePost', "BufReadPost", "InsertLeave" },
+			events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 			linters_by_ft = {
-				rust = { "bacon" },
-				python = { "flake8" },
-				lua = { "selene" }
-			}
+				python = { "ruff" },
+				lua = { "selene" },
+			},
 		},
-		config = function (_, opts)
-			local lint = require('lint')
+		config = function(_, opts)
+			local lint = require("lint")
 
 			lint.linters_by_ft = opts.linters_by_ft
-			-- vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "TextChanged", "InsertLeave" }, {
-			-- 	callback = function()
-			-- 		vim.defer_fn(function()
-			-- 			require("lint").try_lint()
-			-- 		end, 500) -- wait 500 ms
-			-- 	end,
-			-- })
-		end
+			vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "TextChanged", "InsertLeave" }, {
+				callback = function()
+					vim.defer_fn(function()
+						require("lint").try_lint()
+					end, 500) -- wait 500 ms
+				end,
+			})
+		end,
 	},
 
 	{
-		'folke/trouble.nvim',
-		cmd = 'Trouble',
+		"folke/trouble.nvim",
+		cmd = "Trouble",
 		opts = { use_diagnostic_signs = true },
-	}
-
+	},
 }

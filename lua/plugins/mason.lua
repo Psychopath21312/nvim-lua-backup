@@ -17,11 +17,10 @@ return {
 				"codelldb", -- C, C++, Rust
 				-- Linters
 				"shellcheck",
-				"flake8", -- Python
+				"ruff", -- Python
 				"selene", -- Lua
 				-- Formatters
 				"stylua", -- Lua
-				"rustfmt", -- Rust
 			},
 		},
 		config = function(_, opts)
@@ -49,12 +48,11 @@ return {
 			automatic_enable = {
 				exclude = {
 					"rust_analyzer",
-				}
-			}
+				},
+			},
 		},
 		config = function(_, opts)
 			require("mason-lspconfig").setup(opts)
-		end
-	}
-
+		end,
+	},
 }
