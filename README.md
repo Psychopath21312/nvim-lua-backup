@@ -1,0 +1,12 @@
+# Installation
+## Dependencies
+luarocks neovim git
+## optional but recommended
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
+## Required
+git clone 
+
+# Start Neovim 
+nvim
