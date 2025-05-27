@@ -1,6 +1,6 @@
 # Installation
 ## Dependencies
-luarocks neovim git
+for arch: ```sudo pacman -S --needed luarocks neovim git```
 ## optional but recommended
 ```
 rm -rf ~/.local/share/nvim
