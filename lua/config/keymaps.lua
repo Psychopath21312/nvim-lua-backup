@@ -6,12 +6,14 @@ map("i", "jk", "<ESC>")
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- Fast exit
-map('n', '<leader>qq', ':qa!<CR>', { desc = 'Exit all' })
+map("n", "<leader>qq", ":qa!<CR>", { desc = "Exit all" })
 
 -- Neotree
-map('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle NeoTree' })
-map('n', '<leader>o', ':Neotree focus<CR>', { desc = 'Focus NeoTree' })
+map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle NeoTree" })
+map("n", "<leader>o", ":Neotree focus<CR>", { desc = "Focus NeoTree" })
 
+-- Terminal
+map("n", "<Leader>t", ":ToggleTerm size=15 dir=%:p:h<CR>", { desc = "Toggle Terminal" })
 
 -- Dap debugger
 map("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
@@ -38,7 +40,7 @@ map("n", "<leader>ql", "<cmd>lua require'persistence'.load({ last = true })<CR>"
 map("n", "<leader>qd", "<cmd>lua require'persistence'.stop()<CR>", { desc = "Don't Save Current Session" })
 
 -- Windows Navigation
-map('n', '<C-h>', '<C-w>h', { desc = 'Left window' })
-map('n', '<C-j>', '<C-w>j', { desc = 'Down window' })
-map('n', '<C-k>', '<C-w>k', { desc = 'Up window' })
-map('n', '<C-l>', '<C-w>l', { desc = 'Right window' })
+map("n", "<C-h>", "<C-w>h", { desc = "Left window" })
+map("n", "<C-j>", "<C-w>j", { desc = "Down window" })
+map("n", "<C-k>", "<C-w>k", { desc = "Up window" })
+map("n", "<C-l>", "<C-w>l", { desc = "Right window" })

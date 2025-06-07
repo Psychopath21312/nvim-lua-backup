@@ -7,6 +7,11 @@ return {
 		"folke/persistence.nvim",
 		event = "BufReadPre",
 		opts = {},
-	}
+	},
 
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
+	},
 }

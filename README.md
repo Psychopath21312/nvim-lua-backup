@@ -17,3 +17,10 @@ rm -rf ~/.config/nvim/.git
 ```
 nvim
 ```
+
+# Basic usage
+## visual selection + gc  -- comments
+## space + o -- neotree focus
+## space + e -- neotree toggle
+## space + t -- toggle terminal
+## more keymaps in ~/.config/nvim/lua/config/keymaps.lua
