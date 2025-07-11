@@ -6,14 +6,17 @@ return {
 		opts = {
 			ensure_installed = {
 				-- LSP
+				"clangd", -- C, C++
+				"omnisharp", -- C#
 				"pyright", -- Python
 				"rust-analyzer", -- Rust
-				"typescript-language-server",
+				"typescript-language-server", -- Typescript, Javascript
+				"bash-language-server", -- Bash
 				-- DAP
 				"debugpy", -- Python
 				"codelldb", -- C, C++, Rust
 				-- Linters
-				"shellcheck",
+				"shellcheck", -- Bash
 				"ruff", -- Python
 				"selene", -- Lua
 				-- Formatters

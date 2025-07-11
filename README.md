@@ -1,26 +1,23 @@
 # Installation
 ## Dependencies
-for arch: 
-```sudo pacman -S --needed luarocks neovim git```
-## optional but recommended
+Install dependencies for Arch linux: 
+```
+sudo pacman -S --needed base-devel git neovim luarocks 
+```
+## Remove cache
 ```
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim
 ```
-## Required
+## Clone config from github
 ```
 git clone https://github.com/Psychopath21312/nvim-lua-backup.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
-# Start Neovim 
+# Done! You can working
 ```
 nvim
 ```
 
-# Basic usage
-## visual selection + gc  -- comments
-## space + o -- neotree focus
-## space + e -- neotree toggle
-## space + t -- toggle terminal
-## more keymaps in ~/.config/nvim/lua/config/keymaps.lua
+
