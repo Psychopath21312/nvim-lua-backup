@@ -2,7 +2,7 @@
 ### Dependencies
 Install dependencies for Arch linux: 
 ```
-sudo pacman -S --needed base-devel git neovim luarocks 
+sudo pacman -S --needed base-devel git neovim luarocks npm
 ```
 ### Remove cache
 ```
